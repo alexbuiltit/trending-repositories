@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RepositoryList should only show a list of TypeScript repositories 1`] = `
+<div>
+  <ul
+    class="sc-457fc63c-0 gcrsTl"
+  >
+    <li
+      class="sc-c6d6bd61-0 fiYkvw"
+      data-repo-id="42"
+      data-testid="repository-card"
+    >
+      <div
+        class="sc-c6d6bd61-1 hNhUMl"
+      >
+        <h2
+          class="sc-c6d6bd61-3 cpSoRL"
+        >
+          <a
+            href="https://github.com/alexbuiltit"
+            rel="noreferrer"
+            target="_blank"
+          >
+            github-trending
+          </a>
+        </h2>
+        <span
+          class="sc-1762ab62-0 eLoAgg"
+        >
+          TypeScript
+        </span>
+        <p>
+          A repo to display the trending items in GitHub
+        </p>
+        <div
+          class="sc-c6d6bd61-2 gychjE"
+        >
+          <p>
+            Stars: 
+            1
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`RepositoryList should render a list of repositories as expected 1`] = `
+<div>
+  <ul
+    class="sc-457fc63c-0 gcrsTl"
+  >
+    <li
+      class="sc-c6d6bd61-0 fiYkvw"
+      data-repo-id="42"
+      data-testid="repository-card"
+    >
+      <div
+        class="sc-c6d6bd61-1 hNhUMl"
+      >
+        <h2
+          class="sc-c6d6bd61-3 cpSoRL"
+        >
+          <a
+            href="https://github.com/alexbuiltit"
+            rel="noreferrer"
+            target="_blank"
+          >
+            github-trending
+          </a>
+        </h2>
+        <span
+          class="sc-1762ab62-0 eLoAgg"
+        >
+          TypeScript
+        </span>
+        <p>
+          A repo to display the trending items in GitHub
+        </p>
+        <div
+          class="sc-c6d6bd61-2 gychjE"
+        >
+          <p>
+            Stars: 
+            1
+          </p>
+        </div>
+      </div>
+    </li>
+    <li
+      class="sc-c6d6bd61-0 fiYkvw"
+      data-repo-id="4910"
+      data-testid="repository-card"
+    >
+      <div
+        class="sc-c6d6bd61-1 hNhUMl"
+      >
+        <h2
+          class="sc-c6d6bd61-3 cpSoRL"
+        >
+          <a
+            href="https://github.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            another-repo
+          </a>
+        </h2>
+        <span
+          class="sc-1762ab62-0 eLoAgg"
+        >
+          Java
+        </span>
+        <p>
+          An example repository
+        </p>
+        <div
+          class="sc-c6d6bd61-2 gychjE"
+        >
+          <p>
+            Stars: 
+            1
+          </p>
+        </div>
+      </div>
+    </li>
+    <li
+      class="sc-c6d6bd61-0 fiYkvw"
+      data-repo-id="4911120"
+      data-testid="repository-card"
+    >
+      <div
+        class="sc-c6d6bd61-1 hNhUMl"
+      >
+        <h2
+          class="sc-c6d6bd61-3 cpSoRL"
+        >
+          <a
+            href="https://github.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            just-one-more
+          </a>
+        </h2>
+        <span
+          class="sc-1762ab62-0 eLoAgg"
+        >
+          Go
+        </span>
+        <p>
+          The final example repository
+        </p>
+        <div
+          class="sc-c6d6bd61-2 gychjE"
+        >
+          <p>
+            Stars: 
+            1
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
