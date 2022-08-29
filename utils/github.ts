@@ -1,9 +1,10 @@
+import { RepositoryDataMapped, RepositorySearchResult } from '@/types/types';
 import { Octokit } from 'octokit';
 
 export class Github {
   public itemsToFetch = 16;
 
-  public async searchRepositories() {
+  public async searchRepositories(): Promise<RepositorySearchResult> {
     try {
       const octokit = new Octokit();
       const sevenDaysAgo: Date = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
@@ -17,20 +18,32 @@ export class Github {
         page: 1,
       });
 
-      return response.data;
+      const data: RepositorySearchResult = await response.data;
+
+      return data;
     } catch (error) {
-      if (error instanceof Error) {
-        console.error(error);
-      }
+      return {
+        items: [],
+        success: false,
+        error: {
+          ...(error as Error),
+          displayMessage: 'Unable to fetch trending repositories at this time, please try again later.',
+        },
+      };
     }
   }
 
-  public async getTrendingRepositories(count?: number) {
+  public async getTrendingRepositories(count?: number): Promise<RepositoryDataMapped> {
     if (count) {
       this.itemsToFetch = count;
     }
-
     const trendingRepositories = await this.searchRepositories();
+    if (trendingRepositories.error) {
+      return {
+        error: trendingRepositories.error,
+      };
+    }
+
     const repositoriesDataMapped = trendingRepositories?.items.map((item) => {
       return {
         name: item.name,
@@ -41,6 +54,8 @@ export class Github {
         link: item.html_url,
       };
     });
-    return repositoriesDataMapped;
+    return {
+      items: repositoriesDataMapped,
+    };
   }
 }
