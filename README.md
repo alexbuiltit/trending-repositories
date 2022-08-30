@@ -8,20 +8,20 @@ To run the development environment do the following:
 
 - Ensure you are using node LTS     
 - Open the directory in your preferred terminal
-- Run `yarn`
-- Run `yarn dev`
+- Run `yarn` or `npm i`
+- Run `yarn dev` or `npm run dev`
 
 To build and serve the project do the following:
 
 - Ensure you are using node LTS     
 - Open the directory in your preferred terminal
-- Run `yarn`
-- Run `yarn build`
-- Run `yarn start`
+- Run `yarn` or `npm i`
+- Run `yarn build` or `npm run build`
+- Run `yarn start` or `npm run start`
 
 ## Testing
 
-Tests are crested using `jest` and `react-testing-library` in order to run all tests use command `yarn test`
+Tests are crested using `jest` and `react-testing-library` in order to run all tests use command `yarn test` or `npm run test` 
 
 
 
